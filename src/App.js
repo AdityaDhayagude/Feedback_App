@@ -7,7 +7,7 @@ import FeedbackList from "./componenets/FeedbackList"
 import FeedbackStats from "./componenets/FeedbackStats"
 import FeedbackForm from "./componenets/FeedbackForm"
 
-function App() {
+function App() { 
   const [feedback,setFeedback] = useState(FeedbackData)
 
   return (

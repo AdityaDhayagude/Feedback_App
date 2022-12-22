@@ -12,7 +12,7 @@ function FeedbackForm() {
     if(text==='')
     {
       setBtnDisabled(true)
-      setMessage(null)
+      setMessage(null) 
     }
     else if(text!=='' && text.trim().length<=10)
     {
