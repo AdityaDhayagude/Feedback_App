@@ -11,7 +11,7 @@ function FeedbackForm() {
   const handleTextChange = (e) =>{
     if(text==='')
     {
-      setBtnDisabled(true)
+      setBtnDisabled(true)  
       setMessage(null) 
     }
     else if(text!=='' && text.trim().length<=10)
