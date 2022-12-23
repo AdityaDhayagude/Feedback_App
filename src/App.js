@@ -5,7 +5,7 @@ import FeedbackData from "./data/FeedbackData"
 import FeedbackList from "./componenets/FeedbackList"
 // import Card from "./componenets/shared/Card"
 import FeedbackStats from "./componenets/FeedbackStats"
-import FeedbackForm from "./componenets/FeedbackForm"
+import FeedbackForm from "./componenets/FeedbackForm"   
 
 function App() { 
   const [feedback,setFeedback] = useState(FeedbackData)
