@@ -1,0 +1,8 @@
+So here we learned how to create components
+
+How to use snippets like rfce & _rfce 
+
+What to use when we pass variabels dynamically i.e. using {}
+
+We learned how to use props
+How to make ur own props and give them a type check if needed
