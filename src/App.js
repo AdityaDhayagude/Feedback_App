@@ -1,17 +1,32 @@
-// Adding elements without using JSX
-
-import React from 'react'
-
 function App()
 {
-   return React.createElement
-   (
-        'div',
-        {className:'container'},
-        React.createElement('h1',{},'My App')
-   )
-}
+    const title = 'Blog Post'
+    const body = 'This is my blog post'
+    const comments = 
+    [
+        {id:1,text:'Comment One'},
+        {id:2,text:'Comment Two '},
+        {id:3,text:'Comment Three'},
+    ]
+    
 
-// So it's basically React.createElemenet(element_type,class_name,elemennt content,loop )
+    return(
+        <div className="container">
+            <h1>{title}</h1>
+            <p>{body}</p>
+            <p>{Math.random()* 5+5}</p>
+
+            <div className="comments">
+                <h3>Comments ({comments.length})</h3>
+                <ul>
+                    {comments.map((comment,index)=>(
+                        <li key={index}>{comment.text}</li>
+                    )
+                    )}
+                </ul>
+            </div>
+        </div>
+    )
+}
 
 export default App
