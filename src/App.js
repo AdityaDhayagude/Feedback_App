@@ -8,15 +8,13 @@ function App()
         {id:2,text:'Comment Two '},
         {id:3,text:'Comment Three'},
     ]
-    
 
-    return(
-        <div className="container">
-            <h1>{title}</h1>
-            <p>{body}</p>
-            <p>{Math.random()* 5+5}</p>
+    const loading = false
+    const showComments = true 
 
-            <div className="comments">
+    const showCommentBlock = 
+    (
+        <div className="comments">
                 <h3>Comments ({comments.length})</h3>
                 <ul>
                     {comments.map((comment,index)=>(
@@ -25,6 +23,17 @@ function App()
                     )}
                 </ul>
             </div>
+    )
+
+    if(loading) return <h1>Loading....</h1>    
+
+    return(
+        <div className="container">
+            <h1>{title}</h1>
+            <p>{body}</p>
+
+            {showComments && showCommentBlock}
+            
         </div>
     )
 }
