@@ -1,8 +1,6 @@
-import { getElementError } from '@testing-library/react'
-import  React from 'react' //We imported React
-import ReactDOM from 'react-dom'//We imported React DOM
+import React from 'react'// This imports react funtionl libraries
+import ReactDOM  from 'react-dom'
 import './index.css'
-import App from './App'// We imported my App function from App.js
+import App from './App'
 
-//THIS TELLS WHAT AND WHERE TO RENDER THE CODE
-ReactDOM.render(<App />,document.getElementById('root'))
+ReactDOM.render(<App/>,document.getElementById('root'))
