@@ -1,20 +1,19 @@
 import PropTypes from 'prop-types'
 
-// function Header(props) {
-//   return (
-//     <header>
-//         <div className="container">
-//             <h2>{props.text}</h2>
-//         </div>
-//     </header>
-//   )
-// }
 
-function Header({text}) {//Prop was caught here which was thrown by main app
+function Header({text}) {
+
+    const HeaderStyles = 
+    {
+        backgroundColor:'blue',
+        color:'red',
+    }
+    
+    
     return (
-      <header>
+      <header style={HeaderStyles}>
           <div className="container">
-              <h2>{text}</h2> // Prop was dynamically used here
+              <h2>{text}</h2>
           </div>
       </header>
     )

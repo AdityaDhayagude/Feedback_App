@@ -15,7 +15,7 @@ function App()
     return(
         <>
         {/* //// This is how u pass on the component to the manin app for rendering and hencforth u can pass props which are meant to be caught by components */}
-        <Header text='Hello World'/>  
+        <Header text='Feedback-UI'/>  
 
 
         
