@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 
 
-function Header({text}) {
+function Header({text,bgColor,textColor}) {
 
     const HeaderStyles = 
     {
-        backgroundColor:'blue',
-        color:'red',
+        backgroundColor:bgColor,
+        color:textColor,
     }
     
     
@@ -23,14 +23,18 @@ function Header({text}) {
   // We cannn generate Deafault props doen here 
 Header.defaultProps = 
 {
-    text:'Feedback UI'
+    text:'Feedback UI',
+    bgColor:'rgba(0,0,0,0.4)',
+    textColor:'#ff6a95',
 }
 
 
 // User generated prop types can be defined by this method
 Header.propTypes = 
 {
-    text:PropTypes.string
+    text:PropTypes.string,
+    bgColor:PropTypes.string,
+    textColorColor:PropTypes.string,
 }
 
 export default Header
