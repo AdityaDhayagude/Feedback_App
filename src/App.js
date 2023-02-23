@@ -1,3 +1,4 @@
+import {v4 as uuidv4} from 'uuid'
 import { useState } from "react"
 import Header from "./components/Header"
 import FeedbackList from "./components/FeedbackList"
@@ -8,11 +9,20 @@ function App()
 {
     const[feedback,setFeedback] = useState(FeedbackData)
 
+    // Add Feedback
+    const addFeedback = (newFeedback) => {
+        newFeedback.id = uuidv4()
+
+        //... is a spread operator 
+        setFeedback([newFeedback,...feedback])
+    }
+
+    // Delete Feedback
     const deleteFeedback = (id) => {
         if(window.confirm('Are u sure that u wanna delete ?')){
             setFeedback(feedback.filter((item)=> item.id!==id))
         }
-        // The .filter() is an HO array method which allows u to filter through stuff but with adding in conditions can help to filter stuff according to necessity
+    // The .filter() is an HO array method which allows u to filter through stuff but with adding in conditions can help to filter stuff according to necessity
     }
 
     return(
@@ -21,7 +31,7 @@ function App()
         <Header />  
         
         <div className="container">
-            <FeedbackForm/>
+            <FeedbackForm handleAdd={addFeedback}/>
             <FeedbackStats feedback={feedback}/>
             <FeedbackList feedback={feedback}
             handleDelete={deleteFeedback}/>
