@@ -1,10 +1,12 @@
 import { useState } from "react"
+import RatingSelect from "./RatingSelect";
 import Card from "./shared/Card"
 import Button from "./shared/Button";
 
 
 function FeedbackForm() {
     const[text,setText] = useState('')
+    const [rating,setRating] = useState(10)
     //Real-Time validation
     const [btnDisabled,setBtnDisabled] = useState('')
     const [message,setMessage] = useState('')
@@ -27,7 +29,6 @@ function FeedbackForm() {
             setMessage(null)
             setBtnDisabled(false)
         }
-
             setText(e.target.value)
     }
 
@@ -38,6 +39,7 @@ function FeedbackForm() {
     <Card>
         <form action="">
             <h2>How would you like to rate your service with us ?</h2>
+            <RatingSelect select={(rating) => setRating(rating)}    />
             {/* @todo - rating select componenet */}
             <div className="input-group">
                 <input onChange={handleTextChange} type="text" placeholder="Write a review" />
