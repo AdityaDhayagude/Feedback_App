@@ -13,7 +13,7 @@ function App()
     const addFeedback = (newFeedback) => {
         newFeedback.id = uuidv4()
 
-        //... is a spread operator 
+        //... is a spread
         setFeedback([newFeedback,...feedback])
     }
 
