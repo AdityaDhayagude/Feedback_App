@@ -10,7 +10,9 @@ function AboutIconLink() {
         </a> */}
 
         {/* This is how u avoid refreshing at every link click */}
-        <Link to='/about'>
+        <Link to={{
+            pathname:'/about'
+        }}>
             <FaQuestion size={30} />
         </Link>
     </div>
