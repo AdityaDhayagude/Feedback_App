@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Raect App based on simple rating and feedback overwriting techniques also covering basic concepts of Router , Params and navigare
 
 ## Available Scripts
 
